@@ -20,10 +20,14 @@
     display: flex;
     align-items: center;
 }
+.search,
+.search-result {
+    width: 361px;
+}
+
 .search {
     position: relative;
     display: flex;
-    width: 361px;
     height: var(--search-height);
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
@@ -54,6 +58,12 @@
     &:focus-within {
         border: 1.5px solid rgba(22, 24, 35, 0.2);
     }
+}
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
 }
 .clear,
 .loading {
