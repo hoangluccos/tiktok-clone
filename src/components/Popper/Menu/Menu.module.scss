@@ -10,13 +10,35 @@
     padding-bottom: 8px;
 }
 
+//Menu Item
 .menu-item {
     width: 100%;
-    // justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
     border-radius: 0;
     padding: 11px 16px;
-
+    height: 42px;
+    cursor: pointer;
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
+}
+
+//Header
+.header {
+    margin-top: -8px;
+    position: relative;
+    height: 50px;
+}
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
