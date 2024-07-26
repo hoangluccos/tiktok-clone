@@ -19,8 +19,12 @@
     padding: 11px 16px;
     height: 42px;
     cursor: pointer;
+
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
+    }
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
     }
 }
 
