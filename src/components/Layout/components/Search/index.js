@@ -7,6 +7,7 @@ import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import { useDebounce } from '~/hooks';
+import request from '~/utils/request';
 
 const cx = classNames.bind(styles);
 function Search() {
@@ -26,10 +27,15 @@ function Search() {
         }
         setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
-            .then((res) => res.json())
+        request
+            .get('users/search', {
+                params: {
+                    q: debounce,
+                    type: 'less',
+                },
+            })
             .then((res) => {
-                setSearchResult(res.data);
+                setSearchResult(res.data.data);
                 setLoading(false);
             })
             .catch(() => {
